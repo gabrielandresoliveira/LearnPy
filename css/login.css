@@ -1,0 +1,162 @@
+
+    /*cores
+    #c8742b (marrom)
+    #fcf6e0 (fundo claro)
+    */
+    /* Estilos para o formulário de cadastro e login */
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+
+    body{
+        background-color: #fcf6e0;
+    }
+    .form {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #fcf6e0;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .form h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    .form-group {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .form-group label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+    .form-group input {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border: none; /* Remover a borda padrão */
+        border: 2px solid #c8742b; /* Adicionar uma borda na cor c8742b na parte inferior */
+        border-radius: 10px;
+        box-sizing: border-box;
+        background: transparent; 
+        transition: border-bottom 0.3s ease; /* Adicionar uma transição suave para a borda inferior */
+    }
+    
+    .form-group input:focus {
+        border-bottom: 2px solid #c8742b; /* Mudar a cor da borda inferior quando o input está em foco */
+    }
+    
+    .form-group button {
+        width: 100%;
+        padding: 10px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        box-sizing: border-box;
+    }
+
+    .form-group button:hover {
+        background-color: #45a049;
+    }
+
+    /* Estilos para o cartão 3D */
+    .card-3d-wrap {
+        padding-top: 1rem;
+        position: relative;
+        width: 300px;
+        max-width: 100%;
+        height: 450px;
+        -webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+        perspective: 800px;
+        margin-top: 60px;
+    }
+    
+    .card-3d-wrapper {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        -webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+        transition: all 600ms ease-out;
+    }
+    
+    .card-front,
+    .card-back {
+        width: 100%;
+        height: 100%;
+        background-color: #fcf6e0;
+        position: absolute;
+        border-radius: 10px;
+        border: 3px solid #c8742b;
+        -webkit-transform-style: preserve-3D;
+        backface-visibility: hidden;
+    }
+    
+    .card-back {
+        transform: rotateY(180deg);
+    }
+    
+    .checkbox:checked~.card-3d-wrap .card-3d-wrapper {
+        transform: rotateY(180deg);
+    }
+    
+    .checkbox {
+        display: none;
+    }
+.conteudo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#toggleButton {
+    background-color: #fcf6e0;
+    padding: 15px;
+    border-radius: 10px;
+    border: 3px solid #c8742b;
+    color: #c8742b;
+    margin-top: 4rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#toggleButton:hover {
+    color: #fcf6e0;
+    background-color: #c8742b;
+    border: 3px solid #fcf6e0;
+    transform: scale(1.1);
+}
+
+.CadEnt{
+    margin-bottom: 30   px;
+    background-color: #fcf6e0;
+    padding: 8px;
+    border-radius: 10px;
+    border: 3px solid #c8742b;
+    color: #c8742b;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.CadEnt:hover{
+    color: #fcf6e0;
+    background-color: #c8742b;
+    border: 3px solid #fcf6e0;
+    transform: scale(1.1);
+}

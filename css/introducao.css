@@ -1,0 +1,413 @@
+@import url('https://fonts.googleapis.com/css2?family=Tsukimi+Rounded&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    background: #fcf6e0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.circle{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #c8742b;;
+    clip-path: circle(50% at bottom right);
+}
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo{
+    position: relative;
+    max-width:100%
+}
+
+#imgLogo{
+    position: absolute;
+    top: -20px;
+    left: 60px;
+    max-width: 13%;
+}
+
+header .navegation ul{
+    position: relative;
+    display: flex;
+}
+
+header .navegation li{
+    list-style: none;
+}
+
+header .navegation li a{ 
+    font-family: 'Tsukimi Rounded', sans-serif;
+    color: #000;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 20px;
+    margin-left: 50px;
+}
+
+.container{
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container .text{
+    font-family: 'Tsukimi Rounded', sans-serif;
+    position: relative;
+    max-width: 600px;
+    margin-right: 20px;
+}
+
+.container .text h2{
+    color: #000;
+    font-size: 3em;
+    margin-bottom: 10px;
+    line-height: 1em;
+    font-weight: 700;
+}
+
+.container .text h2 span{
+    font-size: 1.1em;
+    color: #c8742b;
+}
+
+.container .text p{
+    font-family: 'Tsukimi Rounded', sans-serif;
+    color: #000;
+    font-size: 1.5em;
+}
+
+.container .text a{
+    display: inline-block;
+    margin-top: 50px;
+    padding: 10px 25px;
+    font-family: 'Tsukimi Rounded', sans-serif;
+    background: #c8742b;
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none;
+    letter-spacing: 1px;
+    border-radius: 40px;
+    transition: 0.3s ease-in-out;
+}
+
+.container .text a:hover{
+    transform: translateY(-10px);
+
+}
+
+.Boximg{
+    position: absolute;
+    right: 5%;
+    bottom: -40px;
+}
+
+.Boximg img{
+    display: grid;  
+    grid-template-columns: repeat(3, 100px);  
+    grid-template-rows: repeat(2, 50px);
+    width: 700px;
+}
+
+.Boximg .img1{
+    margin-left: 20%;
+    animation: zoomIn 1s ease forwards, floatImage 4s ease-out infinite;
+    animation-delay: 1.5s, 2.5s;
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes floatImage{
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-24px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Tsukimi+Rounded&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Tsukimi Rounded', sans-serif;
+}
+
+body {
+    background: #fcf6e0;
+    color: #000;
+}
+
+#imgLogo{
+    position: absolute;
+    top: -20px;
+    left: 60px;
+    max-width: 13%;
+}
+
+.logo{
+    font-size: 25px;
+    color: #000;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+
+.header {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content:flex-end;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    z-index: 100;
+}
+
+
+.navbar {
+    display: flex;
+    align-items: center;
+    }
+    
+
+.navbar a {
+    padding-top: 1.5rem;
+    font-size: 1.5rem;
+    color: #000;
+    text-decoration: none;
+    font-weight: 500;
+    margin-right: 10px;
+    transition: .3s;
+    opacity: 0;
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+.navbar a + a {
+    margin-left: 10px;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #c8742b;
+}
+
+.home {
+    position: relative;
+    display: grid;  
+    grid-template-columns: repeat(3, 100px);  
+    grid-template-rows: repeat(2, 50px);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 70px 10% 0;
+}
+
+.home-content{
+    max-width: 600px;
+}
+
+.home-content h3:nth-last-of-type(2) {
+    margin-bottom: 30px;
+    animation: slideTop 1s ease forwards;
+    animation-delay: .7s;
+}
+
+.home-content h3 {
+    font-size: 32px;
+    font-weight: 700;
+    opacity: 0;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay:  .7s;
+}
+
+.home-content h3 span{
+    color:#c8742b
+}
+
+.home-content h1{
+    font-size: 45px;
+    font-weight: 700;
+    margin: -3px 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 0s;
+}
+
+.home-content p{
+    font-size: 16px;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay:  .7s;
+}
+
+.home-img img{
+    max-width: 750px;
+    height: 100%;
+    margin-right: -20px;
+    opacity: 0;
+    animation: zoomIn 1s ease forwards, floatImage 4s ease-in-out infinite;
+    animation-delay: 2s, 3s;
+    filter: drop-shadow(0px 0px 20px #000);
+}
+
+.social-media a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #c8742b;
+    border-radius:50%;
+    font-size: 20px;
+    color: #c8742b;
+    text-decoration: none;
+    margin: 30px 15px 30px 0;
+    transition: .5s ease;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+.social-media a:hover{
+    background: #c8742b;
+    color: #000;
+    box-shadow: 0 0 20px #c8742b;
+}
+
+.btn{
+    display: inline-block;
+    padding: 12px 28px;
+    background: #9d6745;
+    border-radius: 40px;
+    box-shadow: #9d6745;
+    font-size: 16px;
+    color: #d5b6a4;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 2s;
+}
+
+/* HEYFRAMES ANIMATION */
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideBottom {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes floatImage{
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-24px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
