@@ -1,6 +1,6 @@
 from flask import Flask, render_template
 
-app = Flask(__name)
+app = Flask(__name__)
 
 # Rota para exibir a página de exercício 1
 @app.route('/exercicio1')
