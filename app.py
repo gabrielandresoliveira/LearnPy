@@ -16,3 +16,5 @@ def mostrar_exercicio2():
 
 if __name__ == '__main__':
     app.run()
+    
+    
